@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i6HZEq0FyIOw2NLjEDZFdoEUQx0MySSYGsEeqoeauIhcuNp1UZaiXqd8QJTxYzPjLhFn2JbsDwC4P/J9pDyUtA==",
+  "dgSpecHash": "2t9DOT9nb0l4M8DObZhqfKweRZkGuLyHawLggOUdAo794y68iK6ClBvXBeqUZxDj24IAXvgx+LhLnLAkgohacQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tanggy\\Desktop\\microservices training\\Question-3A-Clara\\consumer\\consumer.csproj",
+  "projectFilePath": "C:\\Users\\tanggy\\Desktop\\microservices training\\Question-3B-Clara\\consumer\\consumer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tanggy\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.10\\microsoft.entityframeworkcore.5.0.10.nupkg.sha512",
     "C:\\Users\\tanggy\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.10\\microsoft.entityframeworkcore.abstractions.5.0.10.nupkg.sha512",

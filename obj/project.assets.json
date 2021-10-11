@@ -838,11 +838,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tanggy\\Desktop\\microservices training\\Question-3A-Clara\\consumer\\consumer.csproj",
+      "projectUniqueName": "C:\\Users\\tanggy\\Desktop\\microservices training\\Question-3B-Clara\\consumer\\consumer.csproj",
       "projectName": "consumer",
-      "projectPath": "C:\\Users\\tanggy\\Desktop\\microservices training\\Question-3A-Clara\\consumer\\consumer.csproj",
+      "projectPath": "C:\\Users\\tanggy\\Desktop\\microservices training\\Question-3B-Clara\\consumer\\consumer.csproj",
       "packagesPath": "C:\\Users\\tanggy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tanggy\\Desktop\\microservices training\\Question-3A-Clara\\consumer\\obj\\",
+      "outputPath": "C:\\Users\\tanggy\\Desktop\\microservices training\\Question-3B-Clara\\consumer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tanggy\\AppData\\Roaming\\NuGet\\NuGet.Config",
