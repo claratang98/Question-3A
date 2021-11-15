@@ -9,13 +9,14 @@ using RabbitMQ.Client.Events;
 
 public class ConsumerRabbitMQ: BackgroundService
 {
-    private readonly ILogger _logger;
+    //private readonly ILogger _logger;
+    private readonly ILogger _BpiItem;
     private IConnection _connection;
     private IModel _channel;
 
     public ConsumerRabbitMQ(ILoggerFactory loggerFactory)
     {
-        this._logger = loggerFactory.CreateLogger<ConsumerRabbitMQ>();
+        this._BpiItem = loggerFactory.CreateLogger<ConsumerRabbitMQ>();
         InitRabbitMQ();
     }
 
@@ -37,7 +38,7 @@ public class ConsumerRabbitMQ: BackgroundService
         _channel = _connection.CreateModel();
 
         //_channel.ExchangeDeclare("demo.exchange", ExchangeType.Topic);
-        _channel.QueueDeclare("greetings", false, false, false, null);
+        _channel.QueueDeclare("Bpi", false, false, false, null);
         // _channel.QueueBind("demo.queue.log", "demo.exchange", "demo.queue.*", null);
         // _channel.BasicQos(0, 1, false);
 
@@ -57,6 +58,7 @@ public class ConsumerRabbitMQ: BackgroundService
             // handle the received message  
             HandleMessage(content);
             _channel.BasicAck(ea.DeliveryTag, false);
+
         };
 
         consumer.Shutdown += OnConsumerShutdown;
@@ -64,14 +66,15 @@ public class ConsumerRabbitMQ: BackgroundService
         consumer.Unregistered += OnConsumerUnregistered;
         consumer.ConsumerCancelled += OnConsumerConsumerCancelled;
 
-        _channel.BasicConsume("greetings", false, consumer);
+        _channel.BasicConsume("Bpi", false, consumer);
         return Task.CompletedTask;
     }
 
     private void HandleMessage(string content)
     {
         // we just print this message   
-        _logger.LogInformation($"consumer received {content}");
+        _BpiItem.LogInformation($"consumer received {content}");
+
     }
 
     private void OnConsumerConsumerCancelled(object sender, ConsumerEventArgs e) { }

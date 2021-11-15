@@ -11,6 +11,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
+using consumer.Models;
+using WebAPIInMemoryDB.Models;
 
 namespace consumer
 {
@@ -27,9 +29,8 @@ namespace consumer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHostedService<ConsumerRabbitMQ>(); 
-            //services.AddDbContext<TodoContext>(opt =>
-            //                       opt.UseInMemoryDatabase("TodoList"));
-
+            services.AddDbContext<BpiDBContext>(opt =>
+                                   opt.UseInMemoryDatabase("BpiList"));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
